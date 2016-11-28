@@ -3,13 +3,13 @@
 
 
 # In[49]:
-
+#ertertertert
 
 
 
 # In[2]:
 
-def mondatokra(szoveg):
+def mondatokrrrra(szoveg):
     mondatok = []
     for darab1 in szoveg.split("."):
         for darab2 in szoveg.split("!"):
