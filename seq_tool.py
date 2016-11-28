@@ -4,7 +4,6 @@ def szetvago(szoveg):
     for word in f.split('.'):
             output_szoveg.join(word)
     return output_szoveg
-    #f.close()
 
 def mondatokra(szoveg):
     mondatok = []
@@ -109,8 +108,6 @@ def process_data(fn):
         title = title.strip()
         year = int(year)
         genres = genres.split(",")
-        #print title, year, genres
-        #break
         for genre in genres:
             if genre not in data:
                 data[genre] = []
