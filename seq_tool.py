@@ -1,31 +1,24 @@
 
 # coding: utf-8
-#sdaasdasdasdasdasdasdasdasdDDZZZZ
 
 # In[49]:
-#ertertertert456456456456456456
 
+def szetvago(szoveg):
+    f = open(szoveg).read()
+    #print(f)
+    #str(f)
+    output_szoveg = str()
+    for word in f.split('.'): #.decode("utf-8"): #.split(',').split('!').split('?').decode("utf-8"):
+            output_szoveg.join(word)
+    return output_szoveg
+    #f.close()
 
-
-# In[2]:
-
-def mondatokrrerrwerrrsdfsdfsdfa(szoveg):
-    mondatok = []wer
-def mondatokraaaa(szoveg):
-    mondatok = []
-    for darab1 in szoveg.split("."):
-        for darab2 in szoveg.split("wer!"):wer
-            for darab3 in szoveg.split("?"):
-                if darab3.strip():wer
-                if darab3.strip():
-#tatat
-                    mondatok.append(darab3.strip())
-    return mondatok    wer
+szetvago("data/piszkos_fred.txt")
 
 
 # In[13]:
 
-def mondatokra2(szoveg):
+def mondatokra(szoveg):
     mondatok = []
     for punct in ".?":
         szoveg = szoveg.strip().replace(punct, "!")
@@ -37,27 +30,12 @@ def mondatokra2(szoveg):
 
 # In[7]:
 
-szoveg = open('data/sample_text.txt').read()
-
-
-# In[48]:
-
-mondatokra2(szoveg)[0][:1000]
-
-
-# In[49]:
-
-mondatokra2(szoveg)
-
-
-
 def szavakra(mondat):
     szavak = mondat.split()
     strippelt_szavak = []
     for szo in szavak:
         strippelt_szavak.append(szo.strip(",.()"))
     return strippelt_szavak
-
 
 
 # In[6]:
@@ -71,12 +49,9 @@ def feldolgoz(fajl):
     return kimenet
 
 
-# In[10]:
+# In[1]:
 
-adat = feldolgoz("data/sample_text.txt")[0][:10]
-
-
-
+def joe(fajl):
     kimenet = []
     szoveg = open(fajl).read()
     for mondat in mondatokra(szoveg):
@@ -86,35 +61,6 @@ adat = feldolgoz("data/sample_text.txt")[0][:10]
                 szavak[index] = "Joe"
         kimenet.append(szavak)
     return kimenet
-
-    
-joe2("data/sample_text.txt")[0][:10]
-
-
-# In[9]:
-
-def asd(fajl):
-    kimenet = []
-    adat = feldolgoz(fajl)
-    for mondat in adat:
-            uj_mondat = []
-            uj_mondat.append(mondat[0])
-            for szo in mondat[1:]:
-                if szo.istitle():
-                    uj_mondat.append("Joe")
-                else:
-                    uj_mondat.append(szo)
-            kimenet.append(uj_mondat)
-    return kimenet    
-
-
-# In[12]:
-
-asd("data/sample_text.txt")[0][-20:]
-
-matrix2 = [ [1,0,0], [0,1,0], [0,0,1] ]
-
-matrix2 == map(list, zip(*matrix2))
 
 
 # In[25]:
@@ -130,23 +76,9 @@ def symet(matrix):
     return "True"
 
 
-symet(matrix)
-
-
-# ### 4.2.2
-# Define a function that takes a list containing lists of equal length (i.e. a table of size $n\times k$) and "transposes" it, creating a table of size $k\times n$.
-
-# In[32]:
-
-matrix = [ [1,0,0,0], [0,1,0,0], [0,0,1,0] ]
-print(len(matrix))
-print(len(matrix[0]))
-
-
 # In[48]:
 
 matrix = [ [1,2,3,4], [0,1,0,0], [3,2,1,0] ]
-
 
 for i in range(len(matrix)):
     for j in range(len(matrix[0])):
@@ -181,37 +113,6 @@ def transpose(matrix):
     return new_matrix
 
 
-# In[59]:
-
-matrix = [ [1,0,0,0], [0,1,0,0], [0,0,1,0] ]
-transpose(matrix)
-
-
-# ### 4.2.3
-# Redo 4.2.2 using nested list comprehension!
-
-# In[61]:
-
-def transpose(matrix):
-    return [[matrix[i][j] for i in range(len(matrix))] for j in range(len(matrix[0])]
-
-
-# ### 4.2.4
-
-# Define a function that takes a list and string, then returns all elements that start with the string, along with their indices in the list.
-
-# In[ ]:
-
-def parosito(lista,szo)
-    
-
-
-# ## 4.3 Dictionaries
-# <a id='4.3'></a>
-
-# ### 4.3.1
-# Use a dictionary to count words in our sample text (use your text processing functions!). Then print the most common words, along with their frequencies!
-
 # In[150]:
 
 data = open('data/movies.tsv').readlines()
@@ -239,23 +140,6 @@ from collections import defaultdict
 d = defaultdict(int)
 
 
-# In[6]:
-
-data
-
-
-# ### 4.3.2
-
-# Define function that performs the factorial operation ($n!$) but caches all results so that each call requires the least possible number of multiplications.
-
-# In[ ]:
-
-
-
-
-# ### 4.3.3
-# Read the dataset in "data/movies.tsv" and store it in a dictionary whose keys are genres and the values are list of tuples of title and year
-
 # In[12]:
 
 def process_data(fn):
@@ -274,27 +158,6 @@ def process_data(fn):
             data[genre].append((title,year))
     return data
 
-
-# In[13]:
-
-data = process_data("data/movies.tsv")
-
-
-# In[14]:
-
-data["horror"][:10]
-
-
-# ### 4.3.4
-# Process the movies dataset (the original file or the dictionary built in __4.3.3__) and build a dictionary that indexes movies by the first letter of the title. Then create a small interface for querying (using the input function)
-
-# In[ ]:
-
-
-
-
-# ### 4.3.5
-# Build an incremental search of movie titles: users should be able to narrow the set of movies with every character they type. You may create deeply nested dictionaries beforehand or process the data on-the-fly.
 
 # In[32]:
 
@@ -328,31 +191,7 @@ def search(fn):
     print letter_index[letter1][letter2][letter3]
 
 
-# In[40]:
-
-search("data/movies.tsv")
-
-
-# ## 4.4 The _collections_ module
-# <a id='4.4'></a>
-
-# ### 4.4.1
-# Modify the word counter in __4.3.1__ so that it uses a defaultdict.
-
-# In[ ]:
-
-
-
-
-# ### 4.4.2
-# Modify the word counter in __4.4.1__ so that it uses a Counter.
-
-# In[ ]:
-
-
-
-
-# In[44]:
+# In[2]:
 
 def query():
     last_name = raw_input()
@@ -380,12 +219,4 @@ while True:
         
     print data
     
-
-
-# ### 4.4.4
-# Convert the database built in __4.4.3__ into a list of namedtuples.
-
-# In[ ]:
-
-
 
