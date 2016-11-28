@@ -1,8 +1,3 @@
-
-# coding: utf-8
-
-# In[49]:
-
 def szetvago(szoveg):
     f = open(szoveg).read()
     #print(f)
@@ -13,11 +8,6 @@ def szetvago(szoveg):
     return output_szoveg
     #f.close()
 
-szetvago("data/piszkos_fred.txt")
-
-
-# In[13]:
-
 def mondatokra(szoveg):
     mondatok = []
     for punct in ".?":
@@ -27,18 +17,12 @@ def mondatokra(szoveg):
             mondatok.append(mondat.strip())
     return mondatok
 
-
-# In[7]:
-
 def szavakra(mondat):
     szavak = mondat.split()
     strippelt_szavak = []
     for szo in szavak:
         strippelt_szavak.append(szo.strip(",.()"))
     return strippelt_szavak
-
-
-# In[6]:
 
 def feldolgoz(fajl):
     kimenet = []
@@ -47,9 +31,6 @@ def feldolgoz(fajl):
         szavak = szavakra(mondat)
         kimenet.append(szavak)
     return kimenet
-
-
-# In[1]:
 
 def joe(fajl):
     kimenet = []
@@ -62,11 +43,7 @@ def joe(fajl):
         kimenet.append(szavak)
     return kimenet
 
-
-# In[25]:
-
 matrix = [ [1,0,0], [0,1,0], [0,0,1] ]
-
 def symet(matrix):
     for i in range(len(matrix)):
         for j in range(len(matrix)):
@@ -75,11 +52,7 @@ def symet(matrix):
 
     return "True"
 
-
-# In[48]:
-
 matrix = [ [1,2,3,4], [0,1,0,0], [3,2,1,0] ]
-
 for i in range(len(matrix)):
     for j in range(len(matrix[0])):
         print matrix[i][j],
@@ -98,9 +71,6 @@ for i in range (len(matrix[0])):
         print transpose[i][j],
     print '\n'
 
-
-# In[58]:
-
 def transpose(matrix):
     n = len(matrix)
     k = len(matrix[0])
@@ -111,9 +81,6 @@ def transpose(matrix):
             new_row.append(old_row[i])
         new_matrix.append(new_row)
     return new_matrix
-
-
-# In[150]:
 
 data = open('data/movies.tsv').readlines()
 data = [line.strip().split("\t") for line in data]
@@ -130,17 +97,11 @@ for movie, year, genres in data:
         d[year] += 1
         d[movie] += 1
 
-
-# In[165]:
-
 data = open('data/sample_text.txt').readlines()
 data = [line.strip().split() for line in data]
 
 from collections import defaultdict
 d = defaultdict(int)
-
-
-# In[12]:
 
 def process_data(fn):
     data = {}
@@ -157,9 +118,6 @@ def process_data(fn):
                 data[genre] = []
             data[genre].append((title,year))
     return data
-
-
-# In[32]:
 
 def build_index(data):
     for movie in data:
@@ -190,9 +148,6 @@ def search(fn):
     letter3 = raw_input()
     print letter_index[letter1][letter2][letter3]
 
-
-# In[2]:
-
 def query():
     last_name = raw_input()
     first_name = raw_input()
@@ -218,5 +173,3 @@ while True:
             del data[last_name]
         
     print data
-    
-
