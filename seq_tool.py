@@ -1,6 +1,6 @@
 
 # coding: utf-8
-
+#sdaasdasdasdasdasdasdasdasdDDZZZZ
 
 # In[49]:
 #ertertertert456456456456456456
@@ -11,10 +11,14 @@
 
 def mondatokrrerrwerrrsdfsdfsdfa(szoveg):
     mondatok = []wer
+def mondatokraaaa(szoveg):
+    mondatok = []
     for darab1 in szoveg.split("."):
         for darab2 in szoveg.split("wer!"):wer
             for darab3 in szoveg.split("?"):
                 if darab3.strip():wer
+                if darab3.strip():
+#tatat
                     mondatok.append(darab3.strip())
     return mondatok    wer
 
