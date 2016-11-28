@@ -1,35 +1,10 @@
 
 # coding: utf-8
 
-# # Excercises for Day 4: Sequences
-# 
-# [4.1 Strings](#4.1)
-# 
-# [4.2 Lists](#4.2)
-# 
-# [4.3 Dictionaries](#4.3)
-# 
-# [4.4 The _collections_ module](#4.4)
-
-# ## 4.1 Strings
-# <a id='4.1'></a>
-
-# ### 4.1.1
-# Define a function that splits a text into sentences (on ".", "!", "?", etc.)
 
 # In[49]:
 
-def szetvago(szoveg):
-    f = open(szoveg).read()
-    #print(f)
-    #str(f)
-    output_szoveg = str()
-    for word in f.split('.'): #.decode("utf-8"): #.split(',').split('!').split('?').decode("utf-8"):
-            output_szoveg.join(word)
-    return output_szoveg
-    #f.close()
 
-szetvago("data/piszkos_fred.txt")
 
 
 # In[2]:
@@ -128,7 +103,7 @@ joe2("data/sample_text.txt")[0][:10]
 
 # In[9]:
 
-def joe(fajl):
+def asd(fajl):
     kimenet = []
     adat = feldolgoz(fajl)
     for mondat in adat:
@@ -145,7 +120,7 @@ def joe(fajl):
 
 # In[12]:
 
-joe("data/sample_text.txt")[0][-20:]
+asd("data/sample_text.txt")[0][-20:]
 
 
 # ### 4.1.3
