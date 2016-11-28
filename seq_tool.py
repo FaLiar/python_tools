@@ -1,9 +1,7 @@
 def szetvago(szoveg):
     f = open(szoveg).read()
-    #print(f)
-    #str(f)
     output_szoveg = str()
-    for word in f.split('.'): #.decode("utf-8"): #.split(',').split('!').split('?').decode("utf-8"):
+    for word in f.split('.'):
             output_szoveg.join(word)
     return output_szoveg
     #f.close()
