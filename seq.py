@@ -3,20 +3,20 @@
 
 
 # In[49]:
-#ertertertert
+#ertertertert456456456456456456
 
 
 
 # In[2]:
 
-def mondatokrrrra(szoveg):
-    mondatok = []
+def mondatokrrerrwerrrsdfsdfsdfa(szoveg):
+    mondatok = []wer
     for darab1 in szoveg.split("."):
-        for darab2 in szoveg.split("!"):
+        for darab2 in szoveg.split("wer!"):wer
             for darab3 in szoveg.split("?"):
-                if darab3.strip():
+                if darab3.strip():wer
                     mondatok.append(darab3.strip())
-    return mondatok    
+    return mondatok    wer
 
 
 # In[13]:
@@ -46,9 +46,6 @@ mondatokra2(szoveg)[0][:1000]
 mondatokra2(szoveg)
 
 
-# Define a function that splits sentences into words, and strips punctuation marks (",", ";", etc.) from edges of words.
-
-# In[7]:
 
 def szavakra(mondat):
     szavak = mondat.split()
@@ -58,7 +55,6 @@ def szavakra(mondat):
     return strippelt_szavak
 
 
-# Use the last two functions in one that takes a filename as its argument and returns the text in the file as a list of lists. Test it on the file "data/sample_text.txt"
 
 # In[6]:
 
@@ -76,17 +72,7 @@ def feldolgoz(fajl):
 adat = feldolgoz("data/sample_text.txt")[0][:10]
 
 
-# In[11]:
 
-adat[:3]
-
-
-# ### 4.1.2
-# Use the functions defined in __4.1.1__ and define a function that goes through a text and replaces all proper names (capitalized words not at the beginning of a sentence) with "Joe". Print the first few sentences to test your solution.
-
-# In[8]:
-
-def joe2(fajl):
     kimenet = []
     szoveg = open(fajl).read()
     for mondat in mondatokra(szoveg):
@@ -121,23 +107,6 @@ def asd(fajl):
 # In[12]:
 
 asd("data/sample_text.txt")[0][-20:]
-
-
-# ### 4.1.3
-# Load the sample text using your function from __4.1.1__ and create a game where the user is shown a half of a word in a small context (e.g. "_Many solu\*\*\*\*\* were suggested_") and has to guess the full word (don't worry about randomization, your solution can come up with the same questions every time).
-
-# In[ ]:
-
-
-
-
-# ## 4.2 Lists
-# <a id='4.2'></a>
-
-# ### 4.2.1
-# Define a function that takes as its input a list of $n$ lists of $n$ numbers (a square matrix) and decides if it is symmetric (i.e. $A[i,j] == A[j,i]$ for all $i, j$).
-
-# In[23]:
 
 matrix2 = [ [1,0,0], [0,1,0], [0,0,1] ]
 
@@ -378,9 +347,6 @@ search("data/movies.tsv")
 
 
 
-
-# ### 4.4.3
-# Define a function that queries users for their last name, first name, year of birth, and hobby, and populates an OrderedDict whose keys are the last names and values are dictionaries with four keys each. If a second person with the same last name is encountered, both should now have keys of the form "lastname_firstname". If the same person is encountered multiple times, his/her data should be updated. Then test the solution of someone else and ask her to test yours.
 
 # In[44]:
 
